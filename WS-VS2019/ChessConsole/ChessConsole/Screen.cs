@@ -1,5 +1,5 @@
 ﻿using System;
-using ChessBoard.Board;
+using ChessBoard;
 
 namespace ChessConsole
 {

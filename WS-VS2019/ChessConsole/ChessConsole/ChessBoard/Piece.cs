@@ -1,4 +1,4 @@
-﻿namespace ChessBoard.Board
+﻿namespace ChessBoard
 {
     class Piece
     {
@@ -9,11 +9,12 @@
         public Board Board { get; protected set; }
 
         // Método construtor
-        public Piece(Position position, Color color, Board board)
+        public Piece(Board board, Color color)
         {
-            Position = position;
-            Color = color;
             Board = board;
+            Color = color;
+
+            Position = null;            
             MovementsMade = 0;
         }
     }

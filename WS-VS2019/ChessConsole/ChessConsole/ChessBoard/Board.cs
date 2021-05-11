@@ -1,4 +1,4 @@
-﻿namespace ChessBoard.Board
+﻿namespace ChessBoard
 {
     class Board
     {
@@ -18,5 +18,15 @@
         // Retornar uma peça
         public Piece GetPiece(int row, int column)
         { return Pieces[row, column]; }
+
+        // Coloca uma peça em uma posição
+        public void PutPiece(Piece piece, Position position)
+        {
+            // Matriz de peças irá receber a nova peça na posição (Row, Column)
+            Pieces[position.Row, position.Column] = piece;
+
+            // Atribuir nova posição a peça
+            piece.Position = position;
+        }
     }
 }
