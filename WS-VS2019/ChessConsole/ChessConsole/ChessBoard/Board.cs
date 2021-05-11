@@ -1,4 +1,4 @@
-﻿namespace Board
+﻿namespace ChessBoard.Board
 {
     class Board
     {
@@ -14,5 +14,9 @@
             Columns = columns;
             Pieces = new Piece[rows, columns];
         }
+
+        // Retornar uma peça
+        public Piece GetPiece(int row, int column)
+        { return Pieces[row, column]; }
     }
 }
